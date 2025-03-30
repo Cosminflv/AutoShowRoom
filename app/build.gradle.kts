@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.app"
+    namespace = "com.example.autoshowroom"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.app"
+        applicationId = "com.example.autoshowroom"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
@@ -37,7 +37,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation("com.google.android.material:material:1.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
