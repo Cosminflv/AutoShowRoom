@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AutoShowroom"
         tools:targetApi="31">
-        <activity android:name=".BrandsActivity"/>
+        <activity android:name=".BrandActivity"/>
+        <activity android:name="BrandDetailActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

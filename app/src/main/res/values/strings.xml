@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AutoShowroom</string>
+<string name="app_name">AutoShowroom</string>
+<string name="back_button_desc">Back</string>
 </resources>
