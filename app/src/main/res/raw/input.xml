@@ -1,25 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CarBrand>
-    <Name>Toyota</Name>
-    <ImagePath>toyota</ImagePath>
-    <FoundedYear>1937</FoundedYear>
-    <Country>Japan</Country>
-    <Url>https://www.toyota-global.com</Url>
-    <Cars>
-        <CarModel>
-            <Name>Corolla</Name>
-            <ImagePath>toyota_corolla</ImagePath>
-            <Description>A compact and efficient sedan known for its reliability.</Description>
-        </CarModel>
-        <CarModel>
-            <Name>Camry</Name>
-            <ImagePath>toyota_camry</ImagePath>
-            <Description>A mid-size car offering comfort and performance.</Description>
-        </CarModel>
-        <CarModel>
-            <Name>Prius</Name>
-            <ImagePath>toyota_prius</ImagePath>
-            <Description>A pioneering hybrid vehicle with excellent fuel efficiency.</Description>
-        </CarModel>
-    </Cars>
-</CarBrand>
+<CarBrands>
+    <CarBrand>
+        <Name>Toyota</Name>
+        <ImagePath>toyota</ImagePath>
+        <FoundedYear>1937</FoundedYear>
+        <Country>Japan</Country>
+        <Url>https://www.toyota-global.com</Url>
+        <Cars>
+            <CarModel>
+                <Name>Corolla</Name>
+                <ImagePath>toyota_corolla</ImagePath>
+                <Description>A compact and efficient sedan known for its reliability.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>Camry</Name>
+                <ImagePath>toyota_camry</ImagePath>
+                <Description>A mid-size car offering comfort and performance.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>Prius</Name>
+                <ImagePath>toyota_prius</ImagePath>
+                <Description>A pioneering hybrid vehicle with excellent fuel efficiency.</Description>
+            </CarModel>
+        </Cars>
+    </CarBrand>
+
+    <CarBrand>
+        <Name>Ford</Name>
+        <ImagePath>ford</ImagePath>
+        <FoundedYear>1903</FoundedYear>
+        <Country>USA</Country>
+        <Url>https://www.ford.com</Url>
+        <Cars>
+            <CarModel>
+                <Name>Mustang</Name>
+                <ImagePath>ford_mustang</ImagePath>
+                <Description>An iconic American muscle car with powerful performance.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>F-150</Name>
+                <ImagePath>ford_f150</ImagePath>
+                <Description>America's best-selling pickup truck for decades.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>Focus</Name>
+                <ImagePath>ford_focus</ImagePath>
+                <Description>A compact car known for agile handling and efficiency.</Description>
+            </CarModel>
+        </Cars>
+    </CarBrand>
+
+    <CarBrand>
+        <Name>BMW</Name>
+        <ImagePath>bmw</ImagePath>
+        <FoundedYear>1916</FoundedYear>
+        <Country>Germany</Country>
+        <Url>https://www.bmw.com</Url>
+        <Cars>
+            <CarModel>
+                <Name>3 Series</Name>
+                <ImagePath>bmw_3_series</ImagePath>
+                <Description>The quintessential sports sedan with premium features.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>X5</Name>
+                <ImagePath>bmw_x5</ImagePath>
+                <Description>A luxury mid-size SUV offering sporty performance.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>i8</Name>
+                <ImagePath>bmw_i8</ImagePath>
+                <Description>A futuristic plug-in hybrid sports car with butterfly doors.</Description>
+            </CarModel>
+        </Cars>
+    </CarBrand>
+
+    <CarBrand>
+        <Name>Tesla</Name>
+        <ImagePath>tesla</ImagePath>
+        <FoundedYear>2003</FoundedYear>
+        <Country>USA</Country>
+        <Url>https://www.tesla.com</Url>
+        <Cars>
+            <CarModel>
+                <Name>Model S</Name>
+                <ImagePath>tesla_model_s</ImagePath>
+                <Description>A fully electric luxury sedan with cutting-edge technology.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>Model 3</Name>
+                <ImagePath>tesla_model_3</ImagePath>
+                <Description>An affordable electric car with impressive range and performance.</Description>
+            </CarModel>
+            <CarModel>
+                <Name>Cybertruck</Name>
+                <ImagePath>tesla_cybertruck</ImagePath>
+                <Description>An all-electric pickup truck with armored exoskeleton.</Description>
+            </CarModel>
+        </Cars>
+    </CarBrand>
+</CarBrands>

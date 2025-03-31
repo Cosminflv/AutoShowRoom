@@ -66,11 +66,14 @@ public class BrandDetailActivity extends AppCompatActivity
             startActivity(intentWeb);
         });
 
+
+
         // Set data
         foundedYearView.setText("Founded year: " + foundedYear);
         countryView.setText("Country: " + country);
         carsCountView.setText("Cars count: " + carsCount);
         brandNameView.setText(brandName);
+        brandLogoView.setImageResource(brandImage);
 
         backButton.setOnClickListener(v -> {
             finish();

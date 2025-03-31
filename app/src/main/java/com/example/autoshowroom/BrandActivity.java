@@ -45,7 +45,7 @@ public class BrandActivity extends AppCompatActivity implements CarBrandAdapter.
         Intent intent = new Intent(this, BrandDetailActivity.class);
 
         CarBrand brand = brands.get(position);
-        int brandImage =this.getResources().getIdentifier(brand.getImagePath(), "drawable", this.getPackageName());
+        int brandImage = this.getResources().getIdentifier(brand.getImagePath(), "drawable", this.getPackageName());
 
         intent.putExtra("brandName", brand.getName());
         intent.putExtra("brandImage", brandImage);
