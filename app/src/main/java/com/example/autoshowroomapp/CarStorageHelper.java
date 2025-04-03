@@ -13,45 +13,46 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class PlayerStorageHelper {
-    private static final String FILE_NAME = "players.json";
+public class CarStorageHelper {
+    private static final String FILE_NAME = "cars.json";
 
-    public static void savePlayers(Context context, ArrayList<Player> players) {
+    public static void saveCars(Context context, ArrayList<Car> cars) {
         try {
             FileOutputStream fos = context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
-            new Gson().toJson(players, writer);
+            new Gson().toJson(cars, writer);
             writer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static ArrayList<Player> loadPlayers(Context context) {
-        ArrayList<Player> players = new ArrayList<>();
+    public static ArrayList<Car> loadCars(Context context) {
+        ArrayList<Car> cars = new ArrayList<>();
         try {
             FileInputStream fis = context.openFileInput(FILE_NAME);
             InputStreamReader reader = new InputStreamReader(fis);
-            Type type = new TypeToken<ArrayList<Player>>(){}.getType();
-            players = new Gson().fromJson(reader, type);
+            Type type = new TypeToken<ArrayList<Car>>(){}.getType();
+            cars = new Gson().fromJson(reader, type);
             reader.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return players;
+        return cars;
     }
-    public static ArrayList<Player> loadInitialPlayersFromAssets(Context context) {
-        ArrayList<Player> players = new ArrayList<>();
+
+    public static ArrayList<Car> loadInitialCarsFromAssets(Context context) {
+        ArrayList<Car> cars = new ArrayList<>();
         try {
-            InputStream is = context.getAssets().open("players.json");
+            InputStream is = context.getAssets().open("cars.json");
             InputStreamReader reader = new InputStreamReader(is);
-            Type type = new TypeToken<ArrayList<Player>>(){}.getType();
-            players = new Gson().fromJson(reader, type);
+            Type type = new TypeToken<ArrayList<Car>>(){}.getType();
+            cars = new Gson().fromJson(reader, type);
             reader.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return players;
+        return cars;
     }
 
     public static boolean dataExists(Context context) {

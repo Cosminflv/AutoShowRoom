@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Model Name -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Model Name" />
+        <EditText
+            android:id="@+id/editModelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Model Name" />
+
+        <!-- Brand Name -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brand Name" />
+        <EditText
+            android:id="@+id/editBrandName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Brand Name" />
+
+        <!-- Number -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number" />
+        <EditText
+            android:id="@+id/editNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Number"
+            android:inputType="number" />
+
+        <!-- Fuel Type -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuel Type" />
+        <EditText
+            android:id="@+id/editFuelType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Fuel Type" />
+
+        <!-- Age -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age" />
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Age"
+            android:inputType="number" />
+
+        <!-- Mileage -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mileage" />
+        <EditText
+            android:id="@+id/editMileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mileage"
+            android:inputType="number" />
+
+        <!-- Color -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Color" />
+        <EditText
+            android:id="@+id/editColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Color" />
+
+        <!-- Image URL -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image URL" />
+        <EditText
+            android:id="@+id/editImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Image URL (optional)" />
+
+        <!-- Wikipedia URL -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wikipedia URL" />
+        <EditText
+            android:id="@+id/editWikiUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Wikipedia URL (optional)" />
+
+        <!-- Image Preview -->
+        <ImageView
+            android:id="@+id/imageSelected"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <!-- Select Image Button -->
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a Photo" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

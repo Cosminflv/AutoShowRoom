@@ -9,48 +9,42 @@
     app:cardElevation="4dp"
     android:padding="12dp">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
-            android:id="@+id/imagePlayer"
+            android:id="@+id/imageCar"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_foreground"
-            android:layout_alignParentStart="true"
-           />
-
+            android:layout_alignParentStart="true"/>
 
         <TextView
-            android:id="@+id/textPlayerName"
+            android:id="@+id/textCarName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nume"
+            android:text="Car Model"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_toEndOf="@id/imagePlayer"
+            android:layout_toEndOf="@id/imageCar"
             android:layout_marginStart="12dp"
-            android:layout_alignTop="@id/imagePlayer" />
+            android:layout_alignTop="@id/imageCar" />
 
-        <!-- Echipă -->
         <TextView
-            android:id="@+id/textPlayerTeam"
+            android:id="@+id/textCarDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Echipă"
+            android:text="Brand Name"
             android:textSize="14sp"
             android:textColor="#777777"
-            android:layout_below="@id/textPlayerName"
-            android:layout_alignStart="@id/textPlayerName"
+            android:layout_below="@id/textCarName"
+            android:layout_alignStart="@id/textCarName"
             android:layout_marginTop="4dp" />
 
-
         <TextView
-            android:id="@+id/textPlayerNumber"
+            android:id="@+id/textCarNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10"
@@ -61,5 +55,6 @@
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

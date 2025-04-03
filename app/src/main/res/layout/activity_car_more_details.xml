@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#142537">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Car Model -->
+        <TextView
+            android:text="Model:"
+            android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textMoreModel"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Car Brand -->
+        <TextView
+            android:text="Brand:"
+            android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textMoreBrand"
+            android:textColor="#A0C4FF"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Fuel Type -->
+        <TextView android:text="Fuel Type:" android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreFuelType" android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Car Number -->
+        <TextView android:text="Number:" android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreNumber" android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Car Mileage -->
+        <TextView android:text="Mileage (km):" android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreMileage" android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Car Age -->
+        <TextView android:text="Age (years):" android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreAge" android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Car Color -->
+        <TextView android:text="Color:" android:textColor="#CCCCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreColor" android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Wikipedia Button -->
+        <Button
+            android:id="@+id/buttonOpenWiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View on Wikipedia"
+            android:backgroundTint="#ff0d4679"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

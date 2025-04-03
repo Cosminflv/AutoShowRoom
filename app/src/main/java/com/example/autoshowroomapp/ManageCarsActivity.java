@@ -11,42 +11,42 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ManagePlayersActivity extends AppCompatActivity {
+public class ManageCarsActivity extends AppCompatActivity {
     private static final int ADD_REQUEST = 1;
     private static final int EDIT_REQUEST = 2;
 
-    private ArrayList<Player> players = new ArrayList<>();
-    private ManagePlayerAdapter adapter;
+    private ArrayList<Car> cars = new ArrayList<>();
+    private ManageCarAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_players);
+        setContentView(R.layout.activity_manage_cars);
 
-        // TODO: Înlocuiește cu încărcare din XML dacă vrei
-        players = PlayerStorageHelper.loadPlayers(this);
+        // Replace with your own loading mechanism if needed
+        cars = CarStorageHelper.loadCars(this);
         RecyclerView recyclerView = findViewById(R.id.recyclerViewManage);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ManagePlayerAdapter(players, this::onEditPlayer, this::onDeletePlayer);
+        adapter = new ManageCarAdapter(cars, this::onEditCar, this::onDeleteCar);
         recyclerView.setAdapter(adapter);
 
-        Button buttonAdd = findViewById(R.id.buttonAddPlayer);
+        Button buttonAdd = findViewById(R.id.buttonAddCar);
         buttonAdd.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AddEditPlayerActivity.class);
+            Intent intent = new Intent(this, AddEditCarActivity.class);
             startActivityForResult(intent, ADD_REQUEST);
         });
     }
 
-    private void onEditPlayer(Player player, int position) {
-        Intent intent = new Intent(this, AddEditPlayerActivity.class);
-        intent.putExtra("player", player);
+    private void onEditCar(Car car, int position) {
+        Intent intent = new Intent(this, AddEditCarActivity.class);
+        intent.putExtra("car", car);
         intent.putExtra("position", position);
         startActivityForResult(intent, EDIT_REQUEST);
     }
 
-    private void onDeletePlayer(int position) {
-        players.remove(position);
-        PlayerStorageHelper.savePlayers(this, players);
+    private void onDeleteCar(int position) {
+        cars.remove(position);
+        CarStorageHelper.saveCars(this, cars);
         adapter.notifyItemRemoved(position);
     }
 
@@ -54,16 +54,16 @@ public class ManagePlayersActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && data != null) {
-            Player player = (Player) data.getSerializableExtra("player");
+            Car car = (Car) data.getSerializableExtra("car");
             int position = data.getIntExtra("position", -1);
 
             if (requestCode == ADD_REQUEST) {
-                players.add(player);
-                PlayerStorageHelper.savePlayers(this, players);
-                adapter.notifyItemInserted(players.size() - 1);
+                cars.add(car);
+                CarStorageHelper.saveCars(this, cars);
+                adapter.notifyItemInserted(cars.size() - 1);
             } else if (requestCode == EDIT_REQUEST && position != -1) {
-                players.set(position, player);
-                PlayerStorageHelper.savePlayers(this, players);
+                cars.set(position, car);
+                CarStorageHelper.saveCars(this, cars);
                 adapter.notifyItemChanged(position);
             }
         }

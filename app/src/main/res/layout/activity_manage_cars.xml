@@ -6,10 +6,10 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/buttonAddPlayer"
+        android:id="@+id/buttonAddCar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add player"
+        android:text="Add Car"
         android:layout_gravity="center_horizontal"
         android:layout_margin="16dp"
         android:backgroundTint="#3E5879"

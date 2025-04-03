@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         buttonManagePlayers.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, ManagePlayersActivity.class);
+            Intent intent = new Intent(HomeActivity.this, ManageCarsActivity.class);
             startActivity(intent);
         });
     }

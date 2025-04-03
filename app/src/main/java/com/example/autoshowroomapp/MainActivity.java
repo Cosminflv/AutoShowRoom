@@ -11,8 +11,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private PlayerAdapter adapter;
-    private List<Player> playerList;
+    private CarAdapter adapter;
+    private List<Car> carList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // ✅ Încarcă din JSON salvat, sau inițial din assets
-        if (PlayerStorageHelper.dataExists(this)) {
-            playerList = PlayerStorageHelper.loadPlayers(this);
+        if (CarStorageHelper.dataExists(this)) {
+            carList = CarStorageHelper.loadCars(this);
         } else {
-            playerList = PlayerStorageHelper.loadInitialPlayersFromAssets(this);
-            PlayerStorageHelper.savePlayers(this, new ArrayList<>(playerList));
+            carList = CarStorageHelper.loadInitialCarsFromAssets(this);
+            CarStorageHelper.saveCars(this, new ArrayList<>(carList));
         }
 
-        adapter = new PlayerAdapter(this, playerList);
+        adapter = new CarAdapter(this, carList);
         recyclerView.setAdapter(adapter);
 
     }
@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // Reîncarcă din JSON în caz că s-au făcut modificări
-        if (playerList != null) {
-            playerList.clear();
-            playerList.addAll(PlayerStorageHelper.loadPlayers(this));
+        if (carList != null) {
+            carList.clear();
+            carList.addAll(CarStorageHelper.loadCars(this));
             adapter.notifyDataSetChanged();
         }
     }

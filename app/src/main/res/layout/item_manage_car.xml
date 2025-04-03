@@ -13,18 +13,18 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textPlayerName"
+            android:id="@+id/textCarName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="Car Model"
             android:textStyle="bold"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textPlayerDetails"
+            android:id="@+id/textCarDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Position - Team"
+            android:text="Brand Name"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -46,10 +46,10 @@
                 android:id="@+id/buttonDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Delete"
                 android:backgroundTint="#A62C2C"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/rounded_button"
-                android:text="Delete"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
     </LinearLayout>

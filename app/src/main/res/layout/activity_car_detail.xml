@@ -5,37 +5,38 @@
     android:background="#142537"
     android:padding="16dp">
 
-    <!-- Imagine -->
+    <!-- Car Image -->
     <ImageView
-        android:id="@+id/imagePlayerDetail"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/imageCarDetail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:layout_marginBottom="16dp" />
 
-    <!-- Nume și poziție -->
+    <!-- Model Name -->
     <TextView
-        android:id="@+id/textFullNameDetail"
+        android:id="@+id/textModelDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zlatan Ibrahimovic"
+        android:text="Model Name"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_gravity="center"/>
 
+    <!-- Brand Name -->
     <TextView
-        android:id="@+id/textPositionDetail"
+        android:id="@+id/textBrandDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forward"
+        android:text="Brand"
         android:textColor="#BBBBBB"
         android:textSize="16sp"
         android:layout_gravity="center"
         android:layout_marginBottom="12dp" />
 
-    <!-- Statistici -->
+    <!-- Car Specifications -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,90 +50,62 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
-            <TextView android:id="@+id/textGamesDetail"
-                android:text="14"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView android:text="Games"
-                android:textColor="#CCCCCC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <TextView android:id="@+id/textGoalsDetail"
-                android:text="8"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView android:text="Goals"
-                android:textColor="#CCCCCC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
             <TextView android:id="@+id/textAgeDetail"
-                android:text="33"
+                android:text="0"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView android:text="Age"
-                android:textColor="#CCCCCC"    android:layout_width="wrap_content"
+                android:textColor="#CCCCCC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:id="@+id/textMileageDetail"
+                android:text="0"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView android:text="Mileage"
+                android:textColor="#CCCCCC"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Informații club -->
-    <TextView
-        android:text="Full Name"
+    <!-- Fuel Type -->
+    <TextView android:text="Fuel Type"
         android:textColor="#CCCCCC"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/textFullNameLabel"
-        android:textColor="#FFFFFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"/>
-    <TextView android:text="Club"
-        android:textColor="#CCCCCC"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView android:id="@+id/textTeamDetail"
+    <TextView android:id="@+id/textFuelTypeDetail"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <TextView android:text="Nationality"
+    <!-- Color -->
+    <TextView android:text="Color"
         android:textColor="#CCCCCC"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <TextView android:id="@+id/textNationalityDetail"
+    <TextView android:id="@+id/textColorDetail"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <!-- Buton pentru detalii -->
+    <!-- Button for more details -->
     <Button
         android:id="@+id/buttonMoreDetails"
         android:layout_width="match_parent"
