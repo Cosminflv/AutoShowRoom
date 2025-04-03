@@ -1,4 +1,4 @@
-package com.example.footballclubapp;
+package com.example.autoshowroomapp;
 
 import org.junit.Test;
 

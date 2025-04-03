@@ -1,4 +1,4 @@
-package com.example.footballclubapp;
+package com.example.autoshowroomapp;
 
 import android.view.LayoutInflater;
 import android.view.View;

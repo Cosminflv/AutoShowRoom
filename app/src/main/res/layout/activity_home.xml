@@ -23,7 +23,7 @@
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Football Club"
+        android:text="Auto Showroom"
         android:textColor="#0D4679"
         android:textSize="32sp"
         android:textStyle="bold"
