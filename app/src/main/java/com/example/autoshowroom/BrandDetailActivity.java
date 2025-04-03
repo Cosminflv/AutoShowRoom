@@ -44,18 +44,27 @@ public class BrandDetailActivity extends AppCompatActivity
         String url = intent.getStringExtra("url");
         int carsCount = intent.getIntExtra("carsCount", 0);
 
-        for(int i = 0; i < carsCount; i++){
-            String nameExtraInfo = "car" + i + "name";
-            String descriptionExtraInfo = "car" + i + "description";
-            String imagePathExtraInfo = "car" + i + "imagePath";
-
-
-        }
-
         seeMoreButton.setOnClickListener(v -> {
             Intent intentMore = new Intent(BrandDetailActivity.this, BrandMoreDetailsActivity.class);
 
             intentMore.putExtra("country", country);
+            intentMore.putExtra("carsCount", carsCount);
+
+            for(int i = 0; i < carsCount; i++){
+                String nameExtraInfo = "car" + i + "name";
+                String descriptionExtraInfo = "car" + i + "description";
+                String imagePathExtraInfo = "car" + i + "imagePath";
+
+                String name = intent.getStringExtra(nameExtraInfo);
+                String description = intent.getStringExtra(descriptionExtraInfo);
+                String imagePath = intent.getStringExtra(imagePathExtraInfo);
+
+                intentMore.putExtra(nameExtraInfo, name);
+                intentMore.putExtra(descriptionExtraInfo, description);
+                intentMore.putExtra(imagePathExtraInfo, imagePath);
+
+                int x = 3;
+            }
 
             startActivity(intentMore);
         });
