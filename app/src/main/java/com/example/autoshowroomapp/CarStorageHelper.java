@@ -1,10 +1,12 @@
 package com.example.autoshowroomapp;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -30,15 +32,23 @@ public class CarStorageHelper {
     public static ArrayList<Car> loadCars(Context context) {
         ArrayList<Car> cars = new ArrayList<>();
         try {
-            FileInputStream fis = context.openFileInput(FILE_NAME);
-            InputStreamReader reader = new InputStreamReader(fis);
+            InputStream is = context.getAssets().open(FILE_NAME);
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+            String json = sb.toString();
+            Log.d("CarStorageHelper", "JSON Content: " + json); // Add this line
             Type type = new TypeToken<ArrayList<Car>>(){}.getType();
-            cars = new Gson().fromJson(reader, type);
-            reader.close();
+            cars = new Gson().fromJson(json, type);
+            br.close();
+            Log.d("CarStorageHelper", "Loaded cars: " + (cars != null ? cars.size() : 0));
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("CarStorageHelper", "Error loading cars", e);
         }
-        return cars;
+        return cars != null ? cars : new ArrayList<>();
     }
 
     public static ArrayList<Car> loadInitialCarsFromAssets(Context context) {

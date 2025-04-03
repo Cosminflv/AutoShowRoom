@@ -2,6 +2,7 @@ package com.example.autoshowroomapp;
 
 import java.io.Serializable;
 
+
 public class Car implements Serializable {
     public int id;
     public String modelName;

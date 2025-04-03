@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
-            android:id="@+id/buttonViewPlayers"
+            android:id="@+id/buttonViewCars"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="Players"
+            android:text="Cars"
             android:backgroundTint="#ff0d4679"
             android:textColor="#FFFFFF"
             android:textSize="16sp"

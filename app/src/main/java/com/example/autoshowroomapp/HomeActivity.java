@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        buttonViewPlayers = findViewById(R.id.buttonViewPlayers);
+        buttonViewPlayers = findViewById(R.id.buttonViewCars);
         buttonManagePlayers = findViewById(R.id.buttonManagePlayers);
 
         buttonViewPlayers.setOnClickListener(v -> {

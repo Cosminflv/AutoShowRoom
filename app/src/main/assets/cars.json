@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "modelName": "Chiron",
+    "brandName": "Bugatti",
+    "number": 7,
+    "imageUrl": "https://cdn.motor1.com/images/mgl/VzMq0z/s3/bugatti-chiron-1500.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bugatti_Chiron",
+    "fuelType": "Petrol",
+    "age": 2,
+    "mileage": 12000,
+    "color": "Black"
+  },
+  {
+    "id": 2,
+    "modelName": "S-Class",
+    "brandName": "Mercedes-Benz",
+    "number": 10,
+    "imageUrl": "https://www.topgear.com/sites/default/files/2022/03/1-Mercedes-S-Class-plug-in.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class",
+    "fuelType": "Diesel",
+    "age": 3,
+    "mileage": 18000,
+    "color": "White"
+  },
+  {
+    "id": 3,
+    "modelName": "812 Superfast",
+    "brandName": "Ferrari",
+    "number": 9,
+    "imageUrl": "https://www.carscoops.com/wp-content/uploads/2018/04/2017-FERRARI-F12TDF-Mecum.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ferrari_812_Superfast",
+    "fuelType": "Hybrid",
+    "age": 1,
+    "mileage": 8000,
+    "color": "Red"
+  },
+  {
+    "id": 4,
+    "modelName": "Countach",
+    "brandName": "Lamborghini",
+    "number": 10,
+    "imageUrl": "https://www.gallery-aaldering.com/wp-content/uploads/gallery/27348894/27348894-57.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lamborghini_Countach",
+    "fuelType": "Electric",
+    "age": 1,
+    "mileage": 5000,
+    "color": "Yellow"
+  },
+  {
+    "id": 5,
+    "modelName": "911",
+    "brandName": "Porsche",
+    "number": 10,
+    "imageUrl": "https://images.prismic.io/carwow/Zz3IQK8jQArT1EUV_2024Porsche911frontquarterdriving2.jpg",
+    "wikipediaUrl": "https://ro.wikipedia.org/wiki/Porsche_911",
+    "fuelType": "Petrol",
+    "age": 2,
+    "mileage": 15000,
+    "color": "Blue"
+  },
+  {
+    "id": 6,
+    "modelName": "Vanquish",
+    "brandName": "Aston Martin",
+    "number": 9,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aston_Martin_Vanquish_S_-_prawy_prz%C3%B3d_%28MSP17%29.jpg/1200px-Aston_Martin_Vanquish_S_-_prawy_prz%C3%B3d_%28MSP17%29.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Aston_Martin_Vanquish",
+    "fuelType": "Petrol",
+    "age": 1,
+    "mileage": 10000,
+    "color": "Silver"
+  },
+  {
+    "id": 7,
+    "modelName": "Evoque",
+    "brandName": "Range Rover",
+    "number": 6,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2019_Land_Rover_Range_Rover_Evoque_R-Dynamic_2.0.jpg/800px-2019_Land_Rover_Range_Rover_Evoque_R-Dynamic_2.0.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Range_Rover_Evoque",
+    "fuelType": "Diesel",
+    "age": 3,
+    "mileage": 22000,
+    "color": "White"
+  }
+]

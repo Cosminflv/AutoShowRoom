@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".PlayerDetailActivity" />
-        <activity android:name=".PlayerMoreDetailsActivity" />
-        <activity android:name=".PlayerWebActivity" />
-        <activity android:name=".AddEditPlayerActivity" />
-        <activity android:name=".ManagePlayersActivity" />
+        <activity android:name=".CarDetailActivity" />
+        <activity android:name=".CarMoreDetailsActivity" />
+        <activity android:name=".CarWebActivity" />
+        <activity android:name=".AddEditCarActivity" />
+        <activity android:name=".ManageCarsActivity" />
     </application>
 
 </manifest>
