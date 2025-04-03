@@ -3,59 +3,62 @@ package com.example.autoshowroom;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class BrandMoreDetailsActivity extends AppCompatActivity
-{
-    TextView carsCountView, countryView, car1NameView, car2NameView;
-    ImageView car1Image, car2Image;
+import com.example.autoshowroom.entities.CarModel;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BrandMoreDetailsActivity extends AppCompatActivity {
+    TextView carsCountView, countryView;
+    RecyclerView carRecyclerView;
+    CarAdapter carAdapter;
+    List<CarModel> carList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brand_more_details);
 
-        // Initialize views
+        // Initialize fixed views
         carsCountView = findViewById(R.id.carsCount);
         countryView = findViewById(R.id.country);
-        car1NameView = findViewById(R.id.car1Name);
-        car1Image = findViewById(R.id.car1Image);
-        car2NameView = findViewById(R.id.car2Name);
-        car2Image = findViewById(R.id.car2Image);
-
-        // Back button
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
 
-        // Get data from intent
+        // Retrieve data from the Intent
         Intent intent = getIntent();
         int carsCount = intent.getIntExtra("carsCount", 0);
         String country = intent.getStringExtra("country");
-        carsCountView.setText("Cars count:" + carsCount);
+        carsCountView.setText("Cars count: " + carsCount);
         countryView.setText("Country: " + country);
 
-        for(int i = 0; i < 2; i++){
-            String nameExtraInfo = "car" + i + "name";
-            String descriptionExtraInfo = "car" + i + "description";
-            String imagePathExtraInfo = "car" + i + "imagePath";
+        // Create the list of CarModel objects based on the intent extras
+        carList = new ArrayList<>();
+        for (int i = 0; i < carsCount; i++) {
+            String nameExtra = "car" + i + "name";
+            String imageExtra = "car" + i + "imagePath";
+            String descriptionExtra = "car" + i + "description";
 
-            String name = intent.getStringExtra(nameExtraInfo);
-            String description = intent.getStringExtra(descriptionExtraInfo);
-            String imagePath = intent.getStringExtra(imagePathExtraInfo);
+            String carName = intent.getStringExtra(nameExtra);
+            String imagePath = intent.getStringExtra(imageExtra);
+            String description = intent.getStringExtra(descriptionExtra);
 
-            if(i == 0){
-                car1NameView.setText(name);
-                int carImage = this.getResources().getIdentifier(imagePath, "drawable", this.getPackageName());
-                car1Image.setImageResource(carImage);
-            } else {
-                car2NameView.setText(name);
-                int carImage = this.getResources().getIdentifier(imagePath, "drawable", this.getPackageName());
-                car2Image.setImageResource(carImage);
+            // Check for non-null values (optional)
+            if (carName != null && imagePath != null && description != null) {
+                carList.add(new CarModel(carName, imagePath, description));
             }
         }
-    }
 
+        // Set up the RecyclerView with a LinearLayoutManager and the adapter
+        carRecyclerView = findViewById(R.id.carRecyclerView);
+        carRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        carAdapter = new CarAdapter(this, carList);
+        carRecyclerView.setAdapter(carAdapter);
+    }
 }
