@@ -32,23 +32,15 @@ public class CarStorageHelper {
     public static ArrayList<Car> loadCars(Context context) {
         ArrayList<Car> cars = new ArrayList<>();
         try {
-            InputStream is = context.getAssets().open(FILE_NAME);
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            StringBuilder sb = new StringBuilder();
-            String line;
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-            String json = sb.toString();
-            Log.d("CarStorageHelper", "JSON Content: " + json); // Add this line
+            FileInputStream fis = context.openFileInput(FILE_NAME);
+            InputStreamReader reader = new InputStreamReader(fis);
             Type type = new TypeToken<ArrayList<Car>>(){}.getType();
-            cars = new Gson().fromJson(json, type);
-            br.close();
-            Log.d("CarStorageHelper", "Loaded cars: " + (cars != null ? cars.size() : 0));
+            cars = new Gson().fromJson(reader, type);
+            reader.close();
         } catch (Exception e) {
-            Log.e("CarStorageHelper", "Error loading cars", e);
+            e.printStackTrace();
         }
-        return cars != null ? cars : new ArrayList<>();
+        return cars;
     }
 
     public static ArrayList<Car> loadInitialCarsFromAssets(Context context) {
