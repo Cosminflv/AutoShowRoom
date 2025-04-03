@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#142537">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Nume jucător -->
+        <TextView
+            android:id="@+id/textMoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lionel Messi"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Echipă -->
+        <TextView
+            android:id="@+id/textMoreTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inter Miami FC"
+            android:textColor="#A0C4FF"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Informații -->
+        <TextView android:text="Poziție:" android:textColor="#CCCCCC"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/textMorePosition" android:textColor="#FFFFFF" android:layout_marginBottom="8dp"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="Număr:" android:textColor="#CCCCCC"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreNumber" android:textColor="#FFFFFF" android:layout_marginBottom="8dp"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="Naționalitate:" android:textColor="#CCCCCC"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreNationality" android:textColor="#FFFFFF" android:layout_marginBottom="8dp"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="Picior preferat:" android:textColor="#CCCCCC"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreFoot" android:textColor="#FFFFFF" android:layout_marginBottom="8dp"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="Vârstă:" android:textColor="#CCCCCC"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/textMoreAge" android:textColor="#FFFFFF" android:layout_marginBottom="16dp"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Ratinguri -->
+        <TextView android:text="Dribbling" android:textColor="#FFFFFF"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressSkills"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="80"
+            android:max="100"
+            android:progressTint="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Mental" android:textColor="#FFFFFF"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressMental"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="75"
+            android:max="100"
+            android:progressTint="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Forță fizică" android:textColor="#FFFFFF"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressPhysical"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="85"
+            android:max="100"
+            android:progressTint="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Șuturi" android:textColor="#FFFFFF"   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressShooting"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="90"
+            android:max="100"
+            android:progressTint="#4CAF50"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rating general -->
+        <TextView
+            android:id="@+id/textMoreRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall Rating: 90"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Buton Wikipedia -->
+        <Button
+            android:id="@+id/buttonOpenWiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wikipedia"
+            android:backgroundTint="#ff0d4679"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>
